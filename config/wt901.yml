@@ -1,13 +1,13 @@
 witmotion:
   ros__parameters:
-    port: ttyUSB0
+    port: /dev/ttyUSB0
     baud_rate: 115200 # baud
-    polling_interval: 50 # ms
-    timeout_ms: 150 # ms
+    polling_interval: 20 # ms
+    timeout_ms: 100 # ms
     restart_service_name: /restart_imu
     imu_publisher:
       topic_name: /imu
-      frame_id: imu
+      frame_id: map
       use_native_orientation: true
       measurements:
         acceleration:
